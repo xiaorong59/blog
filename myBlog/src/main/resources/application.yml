@@ -1,0 +1,12 @@
+spring:
+  thymeleaf:
+    mode: HTML
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://127.0.0.1/ssm_spring_jpa?serverTimezone=UTC
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+comment.avatar: /images/dio.jpg

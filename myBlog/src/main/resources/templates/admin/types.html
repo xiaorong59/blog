@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分类管理</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/me.css">
+</head>
+<body>
+    <!-- 导航 -->
+    <nav th:replace="admin/_fragments :: menu(2)" class="ui inverted attached segment m-padded-tb-mini">
+        <div class="ui container">
+            <div class="ui inverted menu secondary stackable">
+                <h2 class="ui teal header item">管理后台</h2>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini home icon "></i>博客</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini idea icon "></i>分类</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon "></i>标签</a>
+                <div class="right menu m-item m-mobile-hide">
+                    <div class="ui dropdown item">
+                        <div class="text">
+                            <img class="ui avatar image" src="../../static/images/dio.jpg" alt="">
+                            xiaorong
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a class="item" href="#">注销</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="menu toggle ui black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" class="item" th:href="@{/admin/types/input}">新增</a>
+                <a href="#" class="teal active item" th:href="@{/admin/types}">列表</a>
+            </div>
+        </div>
+    </div>
+    <!-- 中间 -->
+    <div class="m-padded-tb-large m-container-small">
+        <div class="ui container">
+            <div id="close-div" th:unless="${#strings.isEmpty(message)}" class="ui success message ">
+                <i class="close icon" onclick="closediv()"></i>
+                <div class="header">提示：</div>
+                <p th:text="${message}">恭喜，操作成功！</p>
+            </div>
+            <table class="ui table celled">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>名称</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="type,iterStat : ${page.content}">
+                        <td th:text="${iterStat.count}">1</td>
+                        <td th:text="${type.name}">《关于我爸和我后妈穿越时空恋爱这件事》</td>
+                        <td>
+                            <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui mini teal basic button">编辑</a>
+                            <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}" class="ui mini teal basic button">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="6">
+                            <div class="ui pagination menu mini" th:if="${page.totalPages}>1">
+                                <a th:href="@{/admin/types(page=${page.number}-1)}" th:unless="${page.first}" class="item">上一页</a>
+                                <a th:href="@{/admin/types(page=${page.number}+1)}" th:unless="${page.last}" class="item">下一页</a>
+                            </div>
+                            <a href="#" th:href="@{/admin/types/input}" class="ui mini teal basic button right floated">新增</a>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer th:replace="admin/_fragments :: footer"></footer>
+    <!--    javascript-->
+    <th:block th:replace="admin/_fragments :: script"/>
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+        $('.ui.dropdown').dropdown({
+            on : 'hover'
+        });
+        // $('.message.close')
+        //     .on('click', function () {
+        //         alert("hahaha");
+        //     $(this)
+        //         .closest('.message')
+        //         .transition('fade');
+        // });
+        function closediv(){
+            $('#close-div').css("display", "none");
+        }
+    </script>
+</body>
+
+</html>

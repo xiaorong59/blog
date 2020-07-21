@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索</title>
+</head>
+<body>
+    <!-- 导航 -->
+    <nav th:replace="_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadom-small">
+        <div class="ui container">
+            <div class="ui inverted menu secondary stackable">
+                <h2 class="ui teal header item">Blog</h2>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini home icon "></i>首页</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini idea icon "></i>分类</a>
+                <a href="#" class="active m-item item m-mobile-hide"><i class="mini tags icon "></i>标签</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini clone icon "></i>归档</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini info icon "></i>关于我</a>
+                <div class="m-item right item m-mobile-hide">
+                    <div class="ui icon input transparent inverted" >
+                            <input type="text" placeholder="Search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="menu toggle ui black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <!-- 中间 -->
+    <div class="m-padded-tb-large m-container">
+        <div class="ui container">
+            <div class="ui grid stackable">
+                <!--左边博客-->
+                    <!-- header -->
+                    <div class="ui segment top attached">
+                        <div class="ui two column grid aligned middle">
+                            <div class="column">
+                                <h3 class="ui teal header">博客</h3>
+                            </div>
+                            <div class="column right aligned">
+                                共 <h3 th:text="${page.totalElements}" class="ui orange header m-inlined-block m-text-thin">14</h3> 篇
+                            </div>
+                        </div>
+                    </div>
+                    <!-- content -->
+                    <div class="ui attached segment">
+                        <div class="ui segment padded vertical m-padded-tb-big" th:each="blog : ${page}">
+                            <div class="ui middle aligned grid mobile reversed stackable" >
+                                <div class="eleven wide column">
+                                    <h3 class="ui header ">
+                                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">我的《母亲》</a>
+                                    </h3>
+                                    <p th:text="|${blog.description}......|" class="m-text">
+                                        母亲的记忆大多都是浙江开始的，别看敖丙是个贵州遵义人，但是成长基本上都是在浙江了。
+                                        打记事以来就是跟父母在浙江各大城市打工游离，这可能也是云贵川一带打工人当时的状况。
+                                        庆幸的是，不管多苦多累，父母都选择了把我带在身边，不离不弃，没让...
+                                    </p>
+                                    <div class="ui grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui link list horizontal">
+                                                <div class="item">
+                                                    <img th:src="@{${blog.user.avatar}}" src="images/dio.jpg" alt="dio" class="ui image avatar">
+                                                    <div class="content"><a th:text="${blog.user.nickname}" href="#" class="header">小容</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="icon calendar"></i> <span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">2020年7月3日</span>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="icon eye"></i> <span th:text="${blog.views}">158</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="five wide column aligned right">
+                                            <a href="#" target="_blank" class="ui label teal basic m-text-thin m-padded-tiny" th:text="${blog.type.name}">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" >
+                                        <img style="width: 400px; height: 170px" class="ui image rounded" th:src="@{${blog.firstPicture}}" src="images/jinlan.jpg" alt="dio">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/*-->
+                        <div class="ui segment padded vertical m-padded-tb-big">
+                            <div class="ui grid mobile reversed stackable">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header ">我是一个标题</h3>
+                                    <p class="m-text">
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    </p>
+                                    <div class="ui grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui link list horizontal">
+                                                <div class="item">
+                                                    <img src="images/dio.jpg" alt="dio" class="ui image avatar">
+                                                    <div class="content"><a href="#" class="header">小容</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="icon calendar"></i> 2020年7月3日
+                                                </div>
+                                                <div class="item">
+                                                    <i class="icon eye"></i> 158
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="five wide column aligned right">
+                                            <a href="#" target="_blank" class="ui label teal basic m-text-thin m-padded-tiny">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank">
+                                        <img class="ui image rounded" src="images/dio.jpg" alt="dio">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui segment padded vertical m-padded-tb-big">
+                            <div class="ui grid mobile reversed stackable">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header ">我是一个标题</h3>
+                                    <p class="m-text">
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    </p>
+                                    <div class="ui grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui link list horizontal">
+                                                <div class="item">
+                                                    <img src="images/dio.jpg" alt="dio" class="ui image avatar">
+                                                    <div class="content"><a href="#" class="header">小容</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="icon calendar"></i> 2020年7月3日
+                                                </div>
+                                                <div class="item">
+                                                    <i class="icon eye"></i> 158
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="five wide column aligned right">
+                                            <a href="#" target="_blank" class="ui label teal basic m-text-thin m-padded-tiny">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank">
+                                        <img class="ui image rounded" src="images/dio.jpg" alt="dio">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui segment padded vertical m-padded-tb-big">
+                            <div class="ui grid mobile reversed stackable">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header ">我是一个标题</h3>
+                                    <p class="m-text">
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    </p>
+                                    <div class="ui grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui link list horizontal">
+                                                <div class="item">
+                                                    <img src="images/dio.jpg" alt="dio" class="ui image avatar">
+                                                    <div class="content"><a href="#" class="header">小容</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="icon calendar"></i> 2020年7月3日
+                                                </div>
+                                                <div class="item">
+                                                    <i class="icon eye"></i> 158
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="five wide column aligned right">
+                                            <a href="#" target="_blank" class="ui label teal basic m-text-thin m-padded-tiny">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank">
+                                        <img class="ui image rounded" src="images/dio.jpg" alt="dio">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui segment padded vertical m-padded-tb-big">
+                            <div class="ui grid mobile reversed stackable">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header ">我是一个标题</h3>
+                                    <p class="m-text">
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    </p>
+                                    <div class="ui grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui link list horizontal">
+                                                <div class="item">
+                                                    <img src="images/dio.jpg" alt="dio" class="ui image avatar">
+                                                    <div class="content"><a href="#" class="header">小容</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="icon calendar"></i> 2020年7月3日
+                                                </div>
+                                                <div class="item">
+                                                    <i class="icon eye"></i> 158
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="five wide column aligned right">
+                                            <a href="#" target="_blank" class="ui label teal basic m-text-thin m-padded-tiny">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank">
+                                        <img class="ui image rounded" src="images/dio.jpg" alt="dio">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui segment padded vertical m-padded-tb-big">
+                            <div class="ui grid mobile reversed stackable">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header ">我是一个标题</h3>
+                                    <p class="m-text">
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                        哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    </p>
+                                    <div class="ui grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui link list horizontal">
+                                                <div class="item">
+                                                    <img src="images/dio.jpg" alt="dio" class="ui image avatar">
+                                                    <div class="content"><a href="#" class="header">小容</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="icon calendar"></i> 2020年7月3日
+                                                </div>
+                                                <div class="item">
+                                                    <i class="icon eye"></i> 158
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="five wide column aligned right">
+                                            <a href="#" target="_blank" class="ui label teal basic m-text-thin m-padded-tiny">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank">
+                                        <img class="ui image rounded" src="images/dio.jpg" alt="dio">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--*/-->
+                    </div>
+                    <!-- footer -->
+                    <div class="ui bottom attached segment" th:if="${page.totalPages}>1">
+                        <div class="ui middle aligned two column grid">
+                            <div class="column">
+                                <a th:href="@{/(page=${page.number}-1)}" th:unless="${page.first}" href="#" class="ui teal button basic mini">上一页</a>
+                            </div>
+                            <div class="column right aligned">
+                                <a th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}" href="#" class="ui teal button basic mini">下一页</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer th:replace="_fragments :: footer"></footer>
+    <!--    javascript-->
+    <th:block th:replace="_fragments :: script"/>
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+    </script>
+</body>
+
+</html>

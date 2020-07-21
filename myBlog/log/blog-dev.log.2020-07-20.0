@@ -1,0 +1,927 @@
+2020-07-20 10:46:48.390  INFO 12860 --- [restartedMain] com.rong.demo.DemoApplication            : Starting DemoApplication on DESKTOP-GF42HCB with PID 12860 (D:\javaprojects\myBlog\target\classes started by Rong in D:\javaprojects\myBlog)
+2020-07-20 10:46:48.402 DEBUG 12860 --- [restartedMain] com.rong.demo.DemoApplication            : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-20 10:46:48.402  INFO 12860 --- [restartedMain] com.rong.demo.DemoApplication            : The following profiles are active: dev
+2020-07-20 10:46:48.489  INFO 12860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-20 10:46:48.490  INFO 12860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-20 10:46:51.591  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 10:46:51.592  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-20 10:46:51.792  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.BlogRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:46:51.794  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.CommentRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:46:51.801  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TagReposiotry. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:46:51.803  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TypeRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:46:51.805  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:46:51.806  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 177ms. Found 0 JDBC repository interfaces.
+2020-07-20 10:46:51.826  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 10:46:51.826  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-20 10:46:51.924  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87ms. Found 5 JPA repository interfaces.
+2020-07-20 10:46:53.985  INFO 12860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-20 10:46:54.000  INFO 12860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 10:46:54.000  INFO 12860 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 10:46:54.207  INFO 12860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 10:46:54.208  INFO 12860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5717 ms
+2020-07-20 10:46:54.618  INFO 12860 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 10:46:54.833  INFO 12860 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-20 10:46:55.121  INFO 12860 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-20 10:46:55.242  WARN 12860 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-20 10:46:55.607  INFO 12860 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-20 10:46:56.052  INFO 12860 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-20 10:46:56.272  INFO 12860 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 10:46:58.774  INFO 12860 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-20 10:46:58.940  INFO 12860 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-20 10:47:00.335  INFO 12860 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-20 10:47:00.600  INFO 12860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-20 10:47:00.602  INFO 12860 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-20 10:47:02.353  INFO 12860 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-20 10:47:02.416  INFO 12860 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-20 10:47:03.485  INFO 12860 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-20 10:47:03.517  INFO 12860 --- [restartedMain] com.rong.demo.DemoApplication            : Started DemoApplication in 17.094 seconds (JVM running for 20.566)
+2020-07-20 10:48:08.459  INFO 12860 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-20 10:48:08.459  INFO 12860 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-20 10:48:08.476  INFO 12860 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-07-20 10:48:08.565  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.Index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-07-20 10:48:09.257  WARN 12860 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-07-20 10:48:09.355  WARN 12860 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-07-20 10:48:09.413  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : result : index
+2020-07-20 10:48:09.413  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 10:48:14.492  INFO 12860 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 10:48:14.675  INFO 12860 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 10:48:14.675  INFO 12860 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 10:48:43.244  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.post', args=[Comment{id=null, nickname='zhangsan', email='1113333@qq.com', content='helloworld', avatar='null', createTime=null}]}
+2020-07-20 10:48:43.924  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : result : redirect:/comments10
+2020-07-20 10:48:43.924  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 10:49:02.672  INFO 12860 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.post', args=[Comment{id=null, nickname='zhangsan', email='1113333@qq.com', content='wefwef', avatar='null', createTime=null}]}
+2020-07-20 10:49:02.926  INFO 12860 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : result : redirect:/comments10
+2020-07-20 10:49:02.926  INFO 12860 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 10:49:47.142  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 10:49:47.149  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 10:49:47.149  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 10:49:55.402  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.post', args=[Comment{id=null, nickname='2123', email='111122223333@qq.com', content='345', avatar='null', createTime=null}]}
+2020-07-20 10:49:55.608  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : result : redirect:/comments10
+2020-07-20 10:49:55.609  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 10:50:31.854  INFO 12860 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 10:50:31.862  INFO 12860 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 10:50:31.862  INFO 12860 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 10:50:37.064  INFO 12860 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.post', args=[Comment{id=null, nickname='12312', email='111122223333@qq.com', content='12312', avatar='null', createTime=null}]}
+2020-07-20 10:50:37.320  INFO 12860 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : result : redirect:/comments10
+2020-07-20 10:50:37.320  INFO 12860 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 10:52:40.251  INFO 12860 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 10:52:40.261  INFO 12860 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 10:52:40.261  INFO 12860 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 10:52:44.937  INFO 12860 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.post', args=[Comment{id=null, nickname='12312', email='111122223333@qq.com', content='12312', avatar='null', createTime=null}]}
+2020-07-20 10:52:45.146  INFO 12860 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : result : redirect:/comments10
+2020-07-20 10:52:45.146  INFO 12860 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 10:56:12.710  INFO 12860 --- [Thread-194] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-20 10:56:12.712  INFO 12860 --- [Thread-194] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-20 10:56:12.715  INFO 12860 --- [Thread-194] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-20 10:56:12.720  INFO 12860 --- [Thread-194] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-20 10:56:12.864  INFO 12860 --- [restartedMain] com.rong.demo.DemoApplication            : Starting DemoApplication on DESKTOP-GF42HCB with PID 12860 (D:\javaprojects\myBlog\target\classes started by Rong in D:\javaprojects\myBlog)
+2020-07-20 10:56:12.865 DEBUG 12860 --- [restartedMain] com.rong.demo.DemoApplication            : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-20 10:56:12.865  INFO 12860 --- [restartedMain] com.rong.demo.DemoApplication            : The following profiles are active: dev
+2020-07-20 10:56:13.274  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 10:56:13.274  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-20 10:56:13.293  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.BlogRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:56:13.295  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.CommentRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:56:13.354  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TagReposiotry. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:56:13.356  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TypeRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:56:13.358  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:56:13.358  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83ms. Found 0 JDBC repository interfaces.
+2020-07-20 10:56:13.362  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 10:56:13.363  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-20 10:56:13.393  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 5 JPA repository interfaces.
+2020-07-20 10:56:13.720  INFO 12860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-20 10:56:13.721  INFO 12860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 10:56:13.721  INFO 12860 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 10:56:13.750  INFO 12860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 10:56:13.750  INFO 12860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 880 ms
+2020-07-20 10:56:13.844  INFO 12860 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 10:56:13.871  INFO 12860 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-20 10:56:13.878  INFO 12860 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-07-20 10:56:13.911  INFO 12860 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-07-20 10:56:13.911  INFO 12860 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-20 10:56:14.128  WARN 12860 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-20 10:56:14.272  INFO 12860 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-20 10:56:14.273  INFO 12860 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-20 10:56:14.464  INFO 12860 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-20 10:56:14.504  INFO 12860 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 10:56:14.984  INFO 12860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-20 10:56:14.986  INFO 12860 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-20 10:56:15.347  INFO 12860 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-20 10:56:15.353  INFO 12860 --- [restartedMain] com.rong.demo.DemoApplication            : Started DemoApplication in 2.551 seconds (JVM running for 572.401)
+2020-07-20 10:56:15.356  INFO 12860 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-07-20 10:56:51.824  INFO 12860 --- [Thread-197] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-20 10:56:51.824  INFO 12860 --- [Thread-197] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-20 10:56:51.825  INFO 12860 --- [Thread-197] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-07-20 10:56:51.835  INFO 12860 --- [Thread-197] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-07-20 10:56:51.995  INFO 12860 --- [restartedMain] com.rong.demo.DemoApplication            : Starting DemoApplication on DESKTOP-GF42HCB with PID 12860 (D:\javaprojects\myBlog\target\classes started by Rong in D:\javaprojects\myBlog)
+2020-07-20 10:56:51.996 DEBUG 12860 --- [restartedMain] com.rong.demo.DemoApplication            : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-20 10:56:51.996  INFO 12860 --- [restartedMain] com.rong.demo.DemoApplication            : The following profiles are active: dev
+2020-07-20 10:56:52.352  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 10:56:52.352  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-20 10:56:52.371  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.BlogRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:56:52.373  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.CommentRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:56:52.375  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TagReposiotry. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:56:52.376  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TypeRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:56:52.378  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 10:56:52.430  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 0 JDBC repository interfaces.
+2020-07-20 10:56:52.434  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 10:56:52.434  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-20 10:56:52.463  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28ms. Found 5 JPA repository interfaces.
+2020-07-20 10:56:52.710  INFO 12860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-20 10:56:52.711  INFO 12860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 10:56:52.711  INFO 12860 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 10:56:52.743  INFO 12860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 10:56:52.744  INFO 12860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 745 ms
+2020-07-20 10:56:52.822  INFO 12860 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 10:56:52.845  INFO 12860 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-20 10:56:52.852  INFO 12860 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-07-20 10:56:52.874  INFO 12860 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-07-20 10:56:52.875  INFO 12860 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-20 10:56:52.990  WARN 12860 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-20 10:56:53.187  INFO 12860 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-20 10:56:53.187  INFO 12860 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-20 10:56:53.343  INFO 12860 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-20 10:56:53.381  INFO 12860 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 10:56:53.837  INFO 12860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-20 10:56:53.838  INFO 12860 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-20 10:56:54.216  INFO 12860 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-20 10:56:54.220  INFO 12860 --- [restartedMain] com.rong.demo.DemoApplication            : Started DemoApplication in 2.279 seconds (JVM running for 611.269)
+2020-07-20 10:56:54.222  INFO 12860 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-07-20 10:57:01.103  INFO 12860 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-20 10:57:01.103  INFO 12860 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-20 10:57:01.116  INFO 12860 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-07-20 10:57:01.122  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 10:57:01.162  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 10:57:01.162  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 10:57:07.978  INFO 12860 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.post', args=[Comment{id=null, nickname='12312', email='111122223333@qq.com', content='12312312', avatar='null', createTime=null}]}
+2020-07-20 10:57:08.207  INFO 12860 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : result : redirect:/comments/10
+2020-07-20 10:57:08.207  INFO 12860 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 10:57:08.229  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 10:57:08.307  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 10:57:08.307  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:05:25.545  INFO 12860 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 11:05:25.555  INFO 12860 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 11:05:25.555  INFO 12860 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:07:48.913  INFO 12860 --- [Thread-390] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-20 11:07:48.914  INFO 12860 --- [Thread-390] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-20 11:07:48.915  INFO 12860 --- [Thread-390] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2020-07-20 11:07:48.928  INFO 12860 --- [Thread-390] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2020-07-20 11:07:49.145  INFO 12860 --- [restartedMain] com.rong.demo.DemoApplication            : Starting DemoApplication on DESKTOP-GF42HCB with PID 12860 (D:\javaprojects\myBlog\target\classes started by Rong in D:\javaprojects\myBlog)
+2020-07-20 11:07:49.145 DEBUG 12860 --- [restartedMain] com.rong.demo.DemoApplication            : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-20 11:07:49.145  INFO 12860 --- [restartedMain] com.rong.demo.DemoApplication            : The following profiles are active: dev
+2020-07-20 11:07:49.547  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 11:07:49.548  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-20 11:07:49.569  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.BlogRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 11:07:49.570  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.CommentRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 11:07:49.572  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TagReposiotry. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 11:07:49.574  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TypeRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 11:07:49.575  INFO 12860 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 11:07:49.576  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 JDBC repository interfaces.
+2020-07-20 11:07:49.580  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 11:07:49.580  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-20 11:07:49.611  INFO 12860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 5 JPA repository interfaces.
+2020-07-20 11:07:49.933  INFO 12860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-20 11:07:49.934  INFO 12860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 11:07:49.934  INFO 12860 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 11:07:49.971  INFO 12860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 11:07:49.971  INFO 12860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 822 ms
+2020-07-20 11:07:50.125  INFO 12860 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 11:07:50.177  INFO 12860 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-20 11:07:50.184  INFO 12860 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2020-07-20 11:07:50.207  INFO 12860 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2020-07-20 11:07:50.208  INFO 12860 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-20 11:07:50.326  WARN 12860 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-20 11:07:50.436  INFO 12860 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-20 11:07:50.437  INFO 12860 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-20 11:07:50.642  INFO 12860 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-20 11:07:50.701  INFO 12860 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 11:07:51.181  INFO 12860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-20 11:07:51.182  INFO 12860 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-20 11:07:51.616  INFO 12860 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-20 11:07:51.620  INFO 12860 --- [restartedMain] com.rong.demo.DemoApplication            : Started DemoApplication in 2.565 seconds (JVM running for 1268.669)
+2020-07-20 11:07:51.622  INFO 12860 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-07-20 11:07:54.769  INFO 12860 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-20 11:07:54.770  INFO 12860 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-20 11:07:54.783  INFO 12860 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-07-20 11:07:54.790  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 11:07:54.841  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 11:07:54.841  INFO 12860 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:08:14.223  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.post', args=[Comment{id=null, nickname='小白', email='111122223333@qq.com', content='我是小白', avatar='null', createTime=null}]}
+2020-07-20 11:08:14.383  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : result : redirect:/comments/10
+2020-07-20 11:08:14.383  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:08:14.400  INFO 12860 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 11:08:14.411  INFO 12860 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 11:08:14.411  INFO 12860 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:13:10.711  INFO 12860 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.post', args=[Comment{id=null, nickname='小黑', email='111122223333@qq.com', content='我是回复小白的评论，我是小黑', avatar='null', createTime=null}]}
+2020-07-20 11:13:10.920  INFO 12860 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : result : redirect:/comments/10
+2020-07-20 11:13:10.921  INFO 12860 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:13:10.925  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 11:13:10.934  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 11:13:10.934  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:17:58.896  INFO 12860 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 11:17:58.908  INFO 12860 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 11:17:58.908  INFO 12860 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:18:01.705  INFO 12860 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 11:18:01.716  INFO 12860 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 11:18:01.717  INFO 12860 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:18:52.266  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 11:18:52.275  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 11:18:52.275  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:20:49.641  INFO 12860 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 11:20:49.651  INFO 12860 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 11:20:49.651  INFO 12860 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:20:49.701 ERROR 12860 --- [http-nio-8080-exec-7] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-7] Exception processing template "blog": An error happened during template parsing (template: "class path resource [templates/blog.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: An error happened during template rendering
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateOutputException: An error happened during template rendering
+	at org.thymeleaf.engine.OutputTemplateHandler.handleText(OutputTemplateHandler.java:75)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleText(ProcessorTemplateHandler.java:587)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleText(TemplateHandlerAdapterMarkupHandler.java:218)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleText(InlinedOutputExpressionMarkupHandler.java:232)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleText(OutputExpressionInlinePreProcessorHandler.java:136)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleText(InlinedOutputExpressionMarkupHandler.java:80)
+	at org.attoparser.HtmlMarkupHandler.handleText(HtmlMarkupHandler.java:208)
+	at org.attoparser.AbstractChainedMarkupHandler.handleText(AbstractChainedMarkupHandler.java:203)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:557)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 50 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{/comments/{id}(id=${blog.id}})}" (template: "blog" - line 646, col 46)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.process(TemplateManager.java:519)
+	at org.thymeleaf.util.LazyProcessingCharSequence.writeUnresolved(LazyProcessingCharSequence.java:85)
+	at org.thymeleaf.util.AbstractLazyCharSequence.write(AbstractLazyCharSequence.java:103)
+	at org.thymeleaf.engine.AbstractTextualTemplateEvent.writeContent(AbstractTextualTemplateEvent.java:224)
+	at org.thymeleaf.engine.Text.write(Text.java:78)
+	at org.thymeleaf.engine.OutputTemplateHandler.handleText(OutputTemplateHandler.java:71)
+	... 59 common frames omitted
+
+2020-07-20 11:20:49.760 ERROR 12860 --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")] with root cause
+
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{/comments/{id}(id=${blog.id}})}" (template: "blog" - line 646, col 46)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.process(TemplateManager.java:519)
+	at org.thymeleaf.util.LazyProcessingCharSequence.writeUnresolved(LazyProcessingCharSequence.java:85)
+	at org.thymeleaf.util.AbstractLazyCharSequence.write(AbstractLazyCharSequence.java:103)
+	at org.thymeleaf.engine.AbstractTextualTemplateEvent.writeContent(AbstractTextualTemplateEvent.java:224)
+	at org.thymeleaf.engine.Text.write(Text.java:78)
+	at org.thymeleaf.engine.OutputTemplateHandler.handleText(OutputTemplateHandler.java:71)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleText(ProcessorTemplateHandler.java:587)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleText(TemplateHandlerAdapterMarkupHandler.java:218)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleText(InlinedOutputExpressionMarkupHandler.java:232)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleText(OutputExpressionInlinePreProcessorHandler.java:136)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleText(InlinedOutputExpressionMarkupHandler.java:80)
+	at org.attoparser.HtmlMarkupHandler.handleText(HtmlMarkupHandler.java:208)
+	at org.attoparser.AbstractChainedMarkupHandler.handleText(AbstractChainedMarkupHandler.java:203)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:557)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-07-20 11:20:49.783 ERROR 12860 --- [http-nio-8080-exec-7] s.e.ErrorMvcAutoConfiguration$StaticView : Cannot render error page for request [/blog/10] and exception [An error happened during template parsing (template: "class path resource [templates/blog.html]")] as the response has already been committed. As a result, the response may have the wrong status code.
+2020-07-20 11:21:12.112  INFO 12860 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 11:21:12.121  INFO 12860 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 11:21:12.121  INFO 12860 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:21:12.152 ERROR 12860 --- [http-nio-8080-exec-7] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-7] Exception processing template "blog": An error happened during template parsing (template: "class path resource [templates/blog.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: An error happened during template rendering
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateOutputException: An error happened during template rendering
+	at org.thymeleaf.engine.OutputTemplateHandler.handleText(OutputTemplateHandler.java:75)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleText(ProcessorTemplateHandler.java:587)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleText(TemplateHandlerAdapterMarkupHandler.java:218)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleText(InlinedOutputExpressionMarkupHandler.java:232)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleText(OutputExpressionInlinePreProcessorHandler.java:136)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleText(InlinedOutputExpressionMarkupHandler.java:80)
+	at org.attoparser.HtmlMarkupHandler.handleText(HtmlMarkupHandler.java:208)
+	at org.attoparser.AbstractChainedMarkupHandler.handleText(AbstractChainedMarkupHandler.java:203)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:557)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 50 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{/comments/{id}(id=${blog.id}})}" (template: "blog" - line 646, col 46)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.process(TemplateManager.java:519)
+	at org.thymeleaf.util.LazyProcessingCharSequence.writeUnresolved(LazyProcessingCharSequence.java:85)
+	at org.thymeleaf.util.AbstractLazyCharSequence.write(AbstractLazyCharSequence.java:103)
+	at org.thymeleaf.engine.AbstractTextualTemplateEvent.writeContent(AbstractTextualTemplateEvent.java:224)
+	at org.thymeleaf.engine.Text.write(Text.java:78)
+	at org.thymeleaf.engine.OutputTemplateHandler.handleText(OutputTemplateHandler.java:71)
+	... 59 common frames omitted
+
+2020-07-20 11:21:12.153 ERROR 12860 --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")] with root cause
+
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{/comments/{id}(id=${blog.id}})}" (template: "blog" - line 646, col 46)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.process(TemplateManager.java:519)
+	at org.thymeleaf.util.LazyProcessingCharSequence.writeUnresolved(LazyProcessingCharSequence.java:85)
+	at org.thymeleaf.util.AbstractLazyCharSequence.write(AbstractLazyCharSequence.java:103)
+	at org.thymeleaf.engine.AbstractTextualTemplateEvent.writeContent(AbstractTextualTemplateEvent.java:224)
+	at org.thymeleaf.engine.Text.write(Text.java:78)
+	at org.thymeleaf.engine.OutputTemplateHandler.handleText(OutputTemplateHandler.java:71)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleText(ProcessorTemplateHandler.java:587)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleText(TemplateHandlerAdapterMarkupHandler.java:218)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleText(InlinedOutputExpressionMarkupHandler.java:232)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleText(OutputExpressionInlinePreProcessorHandler.java:136)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleText(InlinedOutputExpressionMarkupHandler.java:80)
+	at org.attoparser.HtmlMarkupHandler.handleText(HtmlMarkupHandler.java:208)
+	at org.attoparser.AbstractChainedMarkupHandler.handleText(AbstractChainedMarkupHandler.java:203)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:557)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-07-20 11:21:12.165 ERROR 12860 --- [http-nio-8080-exec-7] s.e.ErrorMvcAutoConfiguration$StaticView : Cannot render error page for request [/blog/10] and exception [An error happened during template parsing (template: "class path resource [templates/blog.html]")] as the response has already been committed. As a result, the response may have the wrong status code.
+2020-07-20 11:22:01.061  INFO 12860 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 11:22:01.069  INFO 12860 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 11:22:01.069  INFO 12860 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:22:02.259  INFO 12860 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 11:22:02.267  INFO 12860 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 11:22:02.268  INFO 12860 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:22:22.824  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 11:22:22.830  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 11:22:22.830  INFO 12860 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 11:22:24.113  INFO 12860 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 11:22:24.121  INFO 12860 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 11:22:24.122  INFO 12860 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:21:20.224  INFO 3480 --- [restartedMain] com.rong.demo.DemoApplication            : Starting DemoApplication on DESKTOP-GF42HCB with PID 3480 (D:\javaprojects\myBlog\target\classes started by Rong in D:\javaprojects\myBlog)
+2020-07-20 15:21:20.234 DEBUG 3480 --- [restartedMain] com.rong.demo.DemoApplication            : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-20 15:21:20.234  INFO 3480 --- [restartedMain] com.rong.demo.DemoApplication            : The following profiles are active: dev
+2020-07-20 15:21:20.310  INFO 3480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-20 15:21:20.310  INFO 3480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-20 15:21:21.784  INFO 3480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 15:21:21.785  INFO 3480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-20 15:21:21.887  INFO 3480 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.BlogRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:21:21.889  INFO 3480 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.CommentRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:21:21.891  INFO 3480 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TagReposiotry. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:21:21.892  INFO 3480 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TypeRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:21:21.894  INFO 3480 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:21:21.895  INFO 3480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88ms. Found 0 JDBC repository interfaces.
+2020-07-20 15:21:21.915  INFO 3480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 15:21:21.915  INFO 3480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-20 15:21:22.004  INFO 3480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83ms. Found 5 JPA repository interfaces.
+2020-07-20 15:21:23.990  INFO 3480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-20 15:21:24.015  INFO 3480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 15:21:24.016  INFO 3480 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 15:21:24.228  INFO 3480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 15:21:24.229  INFO 3480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3918 ms
+2020-07-20 15:21:24.659  INFO 3480 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 15:21:24.761  INFO 3480 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-20 15:21:24.976  INFO 3480 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-20 15:21:25.135  WARN 3480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-20 15:21:25.463  INFO 3480 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-20 15:21:25.832  INFO 3480 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-20 15:21:25.923  INFO 3480 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 15:21:27.842  INFO 3480 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-20 15:21:28.029  INFO 3480 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-20 15:21:28.410  INFO 3480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-20 15:21:28.508  INFO 3480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-20 15:21:28.511  INFO 3480 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-20 15:21:30.293  INFO 3480 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-20 15:21:30.342  INFO 3480 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-20 15:21:31.285  INFO 3480 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-20 15:21:31.311  INFO 3480 --- [restartedMain] com.rong.demo.DemoApplication            : Started DemoApplication in 12.367 seconds (JVM running for 16.445)
+2020-07-20 15:21:38.062  INFO 3480 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-20 15:21:38.063  INFO 3480 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-20 15:21:38.081  INFO 3480 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-07-20 15:21:38.168  INFO 3480 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:21:38.426  INFO 3480 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:21:38.426  INFO 3480 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:21:40.354  INFO 3480 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:23:13.064  WARN 3480 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m14s964ms50µs500ns).
+2020-07-20 15:25:19.798  WARN 3480 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s250ms886µs400ns).
+2020-07-20 15:26:08.070  WARN 3480 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s272ms659µs600ns).
+2020-07-20 15:27:01.435  WARN 3480 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s364ms398µs900ns).
+2020-07-20 15:27:33.406  INFO 3480 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:27:33.407  INFO 3480 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:27:35.128  INFO 3480 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-20 15:27:35.131  INFO 3480 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-20 15:27:35.133  INFO 3480 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-20 15:27:35.140  INFO 3480 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-20 15:37:13.786  INFO 15700 --- [restartedMain] com.rong.demo.DemoApplication            : Starting DemoApplication on DESKTOP-GF42HCB with PID 15700 (D:\javaprojects\myBlog\target\classes started by Rong in D:\javaprojects\myBlog)
+2020-07-20 15:37:13.789 DEBUG 15700 --- [restartedMain] com.rong.demo.DemoApplication            : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-20 15:37:13.789  INFO 15700 --- [restartedMain] com.rong.demo.DemoApplication            : The following profiles are active: dev
+2020-07-20 15:37:13.843  INFO 15700 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-20 15:37:13.843  INFO 15700 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-20 15:37:14.771  INFO 15700 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 15:37:14.772  INFO 15700 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-20 15:37:14.832  INFO 15700 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.BlogRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:37:14.836  INFO 15700 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.CommentRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:37:14.839  INFO 15700 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TagReposiotry. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:37:14.840  INFO 15700 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TypeRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:37:14.842  INFO 15700 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:37:14.843  INFO 15700 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 0 JDBC repository interfaces.
+2020-07-20 15:37:14.854  INFO 15700 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 15:37:14.854  INFO 15700 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-20 15:37:14.922  INFO 15700 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 5 JPA repository interfaces.
+2020-07-20 15:37:16.022  INFO 15700 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-20 15:37:16.034  INFO 15700 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 15:37:16.035  INFO 15700 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 15:37:16.172  INFO 15700 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 15:37:16.173  INFO 15700 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2330 ms
+2020-07-20 15:37:16.381  INFO 15700 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 15:37:16.451  INFO 15700 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-20 15:37:16.521  INFO 15700 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-20 15:37:16.671  WARN 15700 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-20 15:37:16.724  INFO 15700 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-20 15:37:16.922  INFO 15700 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-20 15:37:17.290  INFO 15700 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 15:37:19.052  INFO 15700 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-20 15:37:19.085  INFO 15700 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-20 15:37:19.464  INFO 15700 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-20 15:37:19.526  INFO 15700 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-20 15:37:19.529  INFO 15700 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-20 15:37:20.272  INFO 15700 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-20 15:37:20.281  INFO 15700 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-20 15:37:20.976  INFO 15700 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-20 15:37:20.986  INFO 15700 --- [restartedMain] com.rong.demo.DemoApplication            : Started DemoApplication in 7.943 seconds (JVM running for 10.45)
+2020-07-20 15:37:26.421  INFO 15700 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-20 15:37:26.421  INFO 15700 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-20 15:37:26.438  INFO 15700 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-07-20 15:37:26.491  INFO 15700 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:37:26.693  INFO 15700 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:37:26.693  INFO 15700 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:37:28.711  INFO 15700 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:37:28.871  INFO 15700 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:37:28.872  INFO 15700 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:39:23.625  INFO 15700 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:39:23.633  INFO 15700 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:39:23.633  INFO 15700 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:39:24.743  INFO 15700 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:39:24.773  INFO 15700 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:39:24.774  INFO 15700 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:40:57.534  INFO 15700 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:40:57.546  INFO 15700 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:40:57.546  INFO 15700 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:40:58.653  INFO 15700 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:40:58.686  INFO 15700 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:40:58.686  INFO 15700 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:41:01.882  INFO 15700 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:41:01.890  INFO 15700 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:41:01.891  INFO 15700 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:41:03.146  INFO 15700 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:41:03.169  INFO 15700 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:41:03.169  INFO 15700 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:42:31.579  INFO 15700 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:42:31.586  INFO 15700 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:42:31.586  INFO 15700 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:42:32.567  INFO 15700 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:42:32.595  INFO 15700 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:42:32.595  INFO 15700 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:43:03.758  INFO 15700 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:43:03.764  INFO 15700 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:43:03.765  INFO 15700 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:43:04.911  INFO 15700 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:43:04.944  INFO 15700 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:43:04.945  INFO 15700 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:45:50.206  INFO 15700 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:45:50.212  INFO 15700 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:45:50.212  INFO 15700 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:45:51.369  INFO 15700 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:45:51.392  INFO 15700 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:45:51.393  INFO 15700 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:47:32.938  INFO 16988 --- [restartedMain] com.rong.demo.DemoApplication            : Starting DemoApplication on DESKTOP-GF42HCB with PID 16988 (D:\javaprojects\myBlog\target\classes started by Rong in D:\javaprojects\myBlog)
+2020-07-20 15:47:32.941 DEBUG 16988 --- [restartedMain] com.rong.demo.DemoApplication            : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-20 15:47:32.942  INFO 16988 --- [restartedMain] com.rong.demo.DemoApplication            : The following profiles are active: dev
+2020-07-20 15:47:32.996  INFO 16988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-20 15:47:32.997  INFO 16988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-20 15:47:34.003  INFO 16988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 15:47:34.004  INFO 16988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-20 15:47:34.065  INFO 16988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.BlogRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:47:34.067  INFO 16988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.CommentRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:47:34.069  INFO 16988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TagReposiotry. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:47:34.071  INFO 16988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TypeRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:47:34.073  INFO 16988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:47:34.074  INFO 16988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 0 JDBC repository interfaces.
+2020-07-20 15:47:34.085  INFO 16988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 15:47:34.085  INFO 16988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-20 15:47:34.158  INFO 16988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67ms. Found 5 JPA repository interfaces.
+2020-07-20 15:47:35.248  INFO 16988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-20 15:47:35.261  INFO 16988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 15:47:35.261  INFO 16988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 15:47:35.435  INFO 16988 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 15:47:35.436  INFO 16988 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2439 ms
+2020-07-20 15:47:35.660  INFO 16988 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 15:47:35.725  INFO 16988 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-20 15:47:35.790  INFO 16988 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-20 15:47:35.931  WARN 16988 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-20 15:47:35.950  INFO 16988 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-20 15:47:36.093  INFO 16988 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-20 15:47:36.372  INFO 16988 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 15:47:38.075  INFO 16988 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-20 15:47:38.127  INFO 16988 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-20 15:47:38.587  INFO 16988 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-20 15:47:38.656  INFO 16988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-20 15:47:38.659  INFO 16988 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-20 15:47:39.398  INFO 16988 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-20 15:47:39.408  INFO 16988 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-20 15:47:40.247  INFO 16988 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-20 15:47:40.266  INFO 16988 --- [restartedMain] com.rong.demo.DemoApplication            : Started DemoApplication in 8.061 seconds (JVM running for 10.611)
+2020-07-20 15:47:42.899  INFO 16988 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-20 15:47:42.900  INFO 16988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-20 15:47:42.921  INFO 16988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2020-07-20 15:47:42.966  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:47:43.137  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:47:43.138  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:47:44.883  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:47:44.992  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:47:44.993  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:49:43.520  INFO 16988 --- [Thread-194] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-20 15:49:43.523  INFO 16988 --- [Thread-194] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-20 15:49:43.526  INFO 16988 --- [Thread-194] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-20 15:49:43.533  INFO 16988 --- [Thread-194] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-20 15:49:43.705  INFO 16988 --- [restartedMain] com.rong.demo.DemoApplication            : Starting DemoApplication on DESKTOP-GF42HCB with PID 16988 (D:\javaprojects\myBlog\target\classes started by Rong in D:\javaprojects\myBlog)
+2020-07-20 15:49:43.705 DEBUG 16988 --- [restartedMain] com.rong.demo.DemoApplication            : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-20 15:49:43.705  INFO 16988 --- [restartedMain] com.rong.demo.DemoApplication            : The following profiles are active: dev
+2020-07-20 15:49:44.241  INFO 16988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 15:49:44.241  INFO 16988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-20 15:49:44.264  INFO 16988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.BlogRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:49:44.267  INFO 16988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.CommentRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:49:44.271  INFO 16988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TagReposiotry. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:49:44.273  INFO 16988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.TypeRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:49:44.275  INFO 16988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.rong.demo.dao.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-07-20 15:49:44.275  INFO 16988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33ms. Found 0 JDBC repository interfaces.
+2020-07-20 15:49:44.282  INFO 16988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-20 15:49:44.283  INFO 16988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-20 15:49:44.330  INFO 16988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47ms. Found 5 JPA repository interfaces.
+2020-07-20 15:49:44.669  INFO 16988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-20 15:49:44.670  INFO 16988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 15:49:44.670  INFO 16988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 15:49:44.711  INFO 16988 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 15:49:44.711  INFO 16988 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 999 ms
+2020-07-20 15:49:44.789  INFO 16988 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 15:49:44.818  INFO 16988 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-20 15:49:44.825  INFO 16988 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-07-20 15:49:44.849  INFO 16988 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-07-20 15:49:44.849  INFO 16988 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-20 15:49:44.955  WARN 16988 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-20 15:49:45.140  INFO 16988 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-20 15:49:45.141  INFO 16988 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-20 15:49:45.277  INFO 16988 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-20 15:49:45.313  INFO 16988 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 15:49:45.805  INFO 16988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-20 15:49:45.805  INFO 16988 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-20 15:49:46.186  INFO 16988 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-20 15:49:46.189  INFO 16988 --- [restartedMain] com.rong.demo.DemoApplication            : Started DemoApplication in 2.569 seconds (JVM running for 136.534)
+2020-07-20 15:49:46.192  INFO 16988 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-07-20 15:50:03.751  INFO 16988 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-20 15:50:03.752  INFO 16988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-20 15:50:03.762  INFO 16988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-07-20 15:50:03.768  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:50:03.807  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:50:03.807  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:50:04.935  INFO 16988 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:50:04.986  INFO 16988 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:50:04.986  INFO 16988 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:50:28.556  INFO 16988 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:50:28.564  INFO 16988 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:50:28.565  INFO 16988 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:50:29.667  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:50:29.694  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:50:29.695  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:55:15.386  INFO 16988 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:55:15.395  INFO 16988 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:55:15.395  INFO 16988 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:55:16.398  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:55:16.431  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:55:16.431  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:55:21.457  INFO 16988 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:55:21.464  INFO 16988 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:55:21.464  INFO 16988 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:55:22.234  INFO 16988 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:55:22.258  INFO 16988 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:55:22.259  INFO 16988 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:55:33.297  INFO 16988 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:55:33.305  INFO 16988 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:55:33.305  INFO 16988 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:55:34.177  INFO 16988 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:55:34.200  INFO 16988 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:55:34.200  INFO 16988 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:56:23.454  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:56:23.463  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:56:23.463  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:56:24.403  INFO 16988 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:56:24.432  INFO 16988 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:56:24.433  INFO 16988 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:57:39.854  INFO 16988 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:57:39.863  INFO 16988 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:57:39.864  INFO 16988 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:57:41.098  INFO 16988 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:57:41.133  INFO 16988 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:57:41.133  INFO 16988 --- [http-nio-8080-exec-7] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:58:00.069  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:58:00.078  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:58:00.078  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:58:01.173  INFO 16988 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:58:01.200  INFO 16988 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:58:01.200  INFO 16988 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:58:10.366  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:58:10.376  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:58:10.376  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:58:11.398  INFO 16988 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:58:11.425  INFO 16988 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:58:11.425  INFO 16988 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:58:21.270  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 15:58:21.287  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 15:58:21.288  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:58:22.378  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:58:22.406  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:58:22.406  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:59:29.776  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.post', args=[Comment{id=null, nickname='小兰', email='111122223333@qq.com', content='我是小兰回复小黑', avatar='null', createTime=null}]}
+2020-07-20 15:59:30.186  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : result : redirect:/comments/10
+2020-07-20 15:59:30.187  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:59:30.209  INFO 16988 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:59:30.347  INFO 16988 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:59:30.347  INFO 16988 --- [http-nio-8080-exec-8] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:59:48.741  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.post', args=[Comment{id=null, nickname='小白', email='111122223333@qq.com', content='我是小白@小黑', avatar='null', createTime=null}]}
+2020-07-20 15:59:48.968  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : result : redirect:/comments/10
+2020-07-20 15:59:48.969  INFO 16988 --- [http-nio-8080-exec-1] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 15:59:48.973  INFO 16988 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 15:59:48.998  INFO 16988 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 15:59:48.998  INFO 16988 --- [http-nio-8080-exec-10] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 16:00:19.703  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.post', args=[Comment{id=null, nickname='小白', email='111122223333@qq.com', content='我是小白@小兰', avatar='null', createTime=null}]}
+2020-07-20 16:00:19.886  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : result : redirect:/comments/10
+2020-07-20 16:00:19.887  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 16:00:19.892  INFO 16988 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 16:00:19.924  INFO 16988 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 16:00:19.925  INFO 16988 --- [http-nio-8080-exec-6] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 16:00:37.622  INFO 16988 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.post', args=[Comment{id=null, nickname='小白', email='111122223333@qq.com', content='小白@小黑', avatar='null', createTime=null}]}
+2020-07-20 16:00:37.829  INFO 16988 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : result : redirect:/comments/10
+2020-07-20 16:00:37.829  INFO 16988 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 16:00:37.832  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 16:00:37.865  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 16:00:37.865  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 16:01:22.808  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 16:01:22.813  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 16:01:22.814  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 16:01:23.828  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 16:01:23.862  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 16:01:23.863  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 16:02:58.146  INFO 16988 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 16:02:58.155  INFO 16988 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 16:02:58.155  INFO 16988 --- [http-nio-8080-exec-3] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 16:02:59.359  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 16:02:59.392  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 16:02:59.392  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 16:08:10.198  INFO 16988 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 16:08:10.205  INFO 16988 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 16:08:10.205  INFO 16988 --- [http-nio-8080-exec-5] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 16:08:11.096  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 16:08:11.125  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 16:08:11.125  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 16:08:50.889  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 16:08:50.894  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 16:08:50.894  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 16:08:51.743  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 16:08:51.773  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 16:08:51.773  INFO 16988 --- [http-nio-8080-exec-2] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 16:12:06.420  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.IndexController.blog', args=[10, {}]}
+2020-07-20 16:12:06.426  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : result : blog
+2020-07-20 16:12:06.426  INFO 16988 --- [http-nio-8080-exec-4] com.rong.demo.aspect.LogAspect           : --------doAfter--------
+2020-07-20 16:12:07.369  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/comments/10', ip='0:0:0:0:0:0:0:1', classMethod='com.rong.demo.controller.CommentController.comments', args=[10, {}]}
+2020-07-20 16:12:07.399  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : result : blog :: commentList
+2020-07-20 16:12:07.400  INFO 16988 --- [http-nio-8080-exec-9] com.rong.demo.aspect.LogAspect           : --------doAfter--------
