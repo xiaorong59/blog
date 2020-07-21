@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    username: root
+    password:
+    url:  jdbc:mysql://127.0.0.1:3306/ssm_spring_mvc?serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+#    schema:
+#      - classpath:emp.sql
+#      - classpath:department.sql
+#    initialization-mode: always
